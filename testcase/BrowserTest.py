@@ -1,12 +1,11 @@
 from selenium import webdriver
 
-driver = webdriver.Chrome(executable_path="/Volumes/Macintosh HD/For Mac/python project/Browserdrivers/chromedriver")
+# driver = webdriver.Chrome(executable_path="/Volumes/Macintosh HD/For Mac/python project/Browserdrivers/chromedriver")
+from selenium.webdriver import DesiredCapabilities
 
-# remote_url = "http://localhost:4444/wd/hub"
+remote_url = "http://localhost:6666/wd/hub"
 
-# driver = webdriver.Remote(command_executor=remote_url,desired_capabilities={"browserName":"firefox"})
-
-
+driver = webdriver.Remote(command_executor=remote_url,desired_capabilities={"browserName":"chrome"})
 
 driver.get("http://way2automation.com")
 
