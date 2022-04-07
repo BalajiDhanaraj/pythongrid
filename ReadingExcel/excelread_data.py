@@ -27,9 +27,17 @@ def setCellData(path,sheetname,rowno,colno,data):
 
 
 
+path="/Volumes/Macintosh HD/For Mac/python project/pythongrid/ReadingExcel/testdata.xlsx"
 
-for rows in range(4,8):
-    for cols in range(1,4):
-        sheet.cell(row=rows,column=cols).value = "hello"
+sheetname = "Sheet1"
 
-workbook.save("/Volumes/Macintosh HD/For Mac/python project/pythongrid/ReadingExcel/testdata.xlsx")
+rows = getRowCount(path,sheetname)
+cols = getColCount(path,sheetname)
+
+print(rows,"---",cols)
+
+print(getCelldata(path,sheetname,2,1))
+
+print(setCellData(path,sheetname,1,4,"DOB"))
+
+
