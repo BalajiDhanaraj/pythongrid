@@ -15,17 +15,17 @@ mycursor = mydb.cursor()
 mycursor.execute()
 
 
-create table selenium(
-tutorial_id INT NOT NULL auto_increment,
-tutorial_title varchar(100) NOT NULL,
-tutorial_author varchar(40) NOT NULL,
-submission_date date,
-primary key (tutorial_id)
-);
-
-
-
-insert into selenium values(2,"dev","cory",now());
+# create table selenium(
+# tutorial_id INT NOT NULL auto_increment,
+# tutorial_title varchar(100) NOT NULL,
+# tutorial_author varchar(40) NOT NULL,
+# submission_date date,
+# primary key (tutorial_id)
+# );
+#
+#
+#
+# insert into selenium values(2,"dev","cory",now());
 
 
 
