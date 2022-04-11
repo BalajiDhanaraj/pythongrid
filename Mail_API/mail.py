@@ -17,7 +17,7 @@ def send_mail(sender_address, receiver_address, subject, mail_content, attach_fi
 
     # The subject line
     # The body and the attachments for the mail
-    message.attach(MIMEText(mail_content, 'plain'))
+    message.attach(MIMEText(mail_content, 'Bold'))
     attach_file = open(attach_file_name, 'rb')  # Open the file as binary mode
     payload = MIMEBase('application', 'octate-stream')
     payload.set_payload((attach_file).read())
