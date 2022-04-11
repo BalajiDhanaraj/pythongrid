@@ -22,6 +22,7 @@ def send_mail(sender_address, receiver_address, subject, mail_content, attach_fi
     payload = MIMEBase('application', 'octate-stream')
     payload.set_payload((attach_file).read())
     encoders.encode_base64(payload)  # encode the attachment
+
     # add payload header with filename
     payload.add_header('Content-Disposition', 'attachment', filename=attach_file_name)
     message.attach(payload)
