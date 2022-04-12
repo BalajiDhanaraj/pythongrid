@@ -16,13 +16,13 @@ def log_on_failure(request,get_browser):
 
 
 def get_data():
-    return [
+    # return [
+    #     ("trainer@way2automation.com", "kjsdfbksdf"),
+    #     ("java@way2automation.com", "sdf"),
+    #     ("info@way2automation.com", "sdfsdf")
+    # ]
+    workbook = openpyxl.load_workbook(path)
 
-        ("trainer@way2automation.com", "kjsdfbksdf"),
-        ("java@way2automation.com", "sdf"),
-        ("info@way2automation.com", "sdfsdf")
-
-    ]
 
 def setup_function():
     global driver
