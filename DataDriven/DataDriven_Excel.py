@@ -22,6 +22,9 @@ def get_data():
     #     ("info@way2automation.com", "sdfsdf")
     # ]
     workbook = openpyxl.load_workbook(path)
+    sheet = workbook[sheetname]
+    sheet.cell(row=rowno, column=colno).value = data
+    workbook.save("/Volumes/Macintosh HD/For Mac/python project/pythongrid/ReadingExcel/testdata.xlsx")
 
 
 def setup_function():
