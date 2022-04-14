@@ -22,7 +22,7 @@ def get_data():
     #     ("java@way2automation.com", "sdf"),
     #     ("info@way2automation.com", "sdfsdf")
     # ]
-    workbook = openpyxl.load_workbook("/Volumes/Macintosh HD/For Mac/python project/pythongrid/ReadingExcel/testdata.xlsx")
+    workbook = openpyxl.load_workbook("/Volumes/Macintosh HD/For Mac/python project/pythongrid/DataDriven/testdata1.xlsx")
     sheet = workbook['Sheet1']
     totalrows = sheet.max_row
     totalcols = sheet.max_column
@@ -32,6 +32,10 @@ def get_data():
         dataList = []
         for j in range(1, totalcols+1):
             data = sheet.cell(row=i,column=j).value
+            dataList.insert(j,data)
+        mainList.insert(i,dataList)
+        print(mainList)
+        return mainList
 
 
 
