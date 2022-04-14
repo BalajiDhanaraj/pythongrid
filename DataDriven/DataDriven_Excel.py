@@ -1,4 +1,5 @@
 import allure
+import openpyxl
 import pytest
 from allure_commons.types import AttachmentType
 from selenium import webdriver
@@ -21,10 +22,17 @@ def get_data():
     #     ("java@way2automation.com", "sdf"),
     #     ("info@way2automation.com", "sdfsdf")
     # ]
-    workbook = openpyxl.load_workbook(path)
-    sheet = workbook[sheetname]
-    sheet.cell(row=rowno, column=colno).value = data
-    workbook.save("/Volumes/Macintosh HD/For Mac/python project/pythongrid/ReadingExcel/testdata.xlsx")
+    workbook = openpyxl.load_workbook("/Volumes/Macintosh HD/For Mac/python project/pythongrid/ReadingExcel/testdata.xlsx")
+    sheet = workbook['Sheet1']
+    totalrows = sheet.max_row
+    totalcols = sheet.max_column
+    mainList = []
+
+    for i in range(2,totalrows+1):
+        dataList = []
+        for j in range(1, totalcols+1):
+            data = sheet.cell(row=i,column=j).value
+
 
 
 def setup_function():
