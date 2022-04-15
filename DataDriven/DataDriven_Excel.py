@@ -22,7 +22,7 @@ def get_data():
     #     ("java@way2automation.com", "sdf"),
     #     ("info@way2automation.com", "sdfsdf")
     # ]
-    workbook = openpyxl.load_workbook("/Volumes/Macintosh HD/For Mac/python project/pythongrid/DataDriven/testdata1.xlsx")
+    workbook = openpyxl.load_workbook("/Volumes/Macintosh HD/For Mac/python project/pythongrid/DataDriven/testdata.xlsx")
     sheet = workbook['Sheet1']
     totalrows = sheet.max_row
     totalcols = sheet.max_column
