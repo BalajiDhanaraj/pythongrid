@@ -35,7 +35,7 @@ def get_data():
             dataList.insert(j,data)
         mainList.insert(i,dataList)
         print(mainList)
-        return mainList
+    return mainList
 
 
 
