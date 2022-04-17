@@ -1,8 +1,8 @@
 import pytest
 
 def test_m1():
-    a = 2
-    b = 3
+    a = 10
+    b = 12
     assert a == b
 
 def test_m2():
