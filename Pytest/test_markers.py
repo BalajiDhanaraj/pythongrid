@@ -6,7 +6,7 @@ def test_m1():
     a = 10
     b = 12
     assert a == b
-@pytest.mark.login
+@pytest.mark.home
 def test_m2():
     assert False
 @pytest.mark.login
