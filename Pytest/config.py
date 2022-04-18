@@ -10,4 +10,4 @@ def init_driver(request):
     request.cls.driver = driver
     yield
     print("----------------------quit----------------------")
-    driver.quit()
+    driver.close()

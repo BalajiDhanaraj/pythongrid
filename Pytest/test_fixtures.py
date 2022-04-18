@@ -24,16 +24,16 @@ from selenium import webdriver
 # # def test_FB(init_driver):
 # #     assert driver.title == "Facebook – log in or sign up"
 
-
-@pytest.fixture(params=['chrome'],scope='class')
-def init_driver(request):
-    print("-------------------setup----------------------")
-    driver = webdriver.Chrome(
-        executable_path="/Volumes/Macintosh HD/For Mac/python project/pythongrid/grid/chromedriver")
-    request.cls.driver = driver
-    yield
-    print("----------------------quit----------------------")
-    driver.quit()
+#
+# @pytest.fixture(params=['chrome'],scope='class')
+# def init_driver(request):
+#     print("-------------------setup----------------------")
+#     driver = webdriver.Chrome(
+#         executable_path="/Volumes/Macintosh HD/For Mac/python project/pythongrid/grid/chromedriver")
+#     request.cls.driver = driver
+#     yield
+#     print("----------------------quit----------------------")
+#     driver.quit()
 
 
 @pytest.mark.usefixtures("init_driver")
